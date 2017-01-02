@@ -23,7 +23,7 @@ template <typename I, typename N, typename R, typename B>
 void merge_adaptive_n(I  f0,   N  n0,
                       I  f1,   N  n1,   R r, B buffer, N buffer_size) {
   // precondition std::distance(f0, f1) == n0
-  // precondition is_sorted_n(f0, n0, r) && is_sorted(f1, n1, r)
+  // precondition is_sorted_n(f0, n0, r) && is_sorted_n(f1, n1, r)
   if (!n0 || !n1) return;
   if (n0 <= buffer_size) {
     I last = f1;

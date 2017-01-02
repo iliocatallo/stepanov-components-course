@@ -25,7 +25,7 @@ void merge_inplace_left_subproblem(I  f0,   N  n0,
                                    I& f1_1, N& n1_1,
                                    R r) {
   // precondition std::distance(f0, f1) == n0
-  // precondition is_sorted_n(f0, n0, r) && is_sorted(f1, n1, r)
+  // precondition is_sorted_n(f0, n0, r) && is_sorted_n(f1, n1, r)
   // precondition n0 > 0
   // precondition n1 > 0
   f0_0 = f0;
@@ -53,7 +53,7 @@ void merge_inplace_right_subproblem(I  f0,   N  n0,
                                     I& f1_1, N& n1_1,
                                     R r) {
   // precondition std::distance(f0, f1) == n0
-  // precondition is_sorted_n(f0, n0, r) && is_sorted(f1, n1, r)
+  // precondition is_sorted_n(f0, n0, r) && is_sorted_n(f1, n1, r)
   // precondition n0 > 0
   // precondition n1 > 0
   f0_0 = f0;
@@ -75,7 +75,7 @@ template <typename I, typename N, typename R>
 void merge_inplace_n(I  f0,   N  n0,
                      I  f1,   N  n1,   R r) {
   // precondition std::distance(f0, f1) == n0
-  // precondition is_sorted_n(f0, n0, r) && is_sorted(f1, n1, r)
+  // precondition is_sorted_n(f0, n0, r) && is_sorted_n(f1, n1, r)
   if (!n0 || !n1) return;
   I f0_0, f0_1, f1_0, f1_1;
   N n0_0, n0_1, n1_0, n1_1;
